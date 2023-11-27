@@ -57,4 +57,6 @@ ADD entrypoint.sh /entrypoint.sh
 
 RUN chmod a+x /entrypoint.sh
 
+RUN sed -i 's/\r$//' /entrypoint.sh
+
 ENTRYPOINT ["/entrypoint.sh"]

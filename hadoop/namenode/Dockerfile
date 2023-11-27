@@ -8,6 +8,7 @@ VOLUME /hadoop/dfs/name
 
 ADD run.sh /run.sh
 RUN chmod a+x /run.sh
+RUN sed -i 's/\r$//' /run.sh
 
 EXPOSE 9870
 
